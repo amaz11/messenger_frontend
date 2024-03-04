@@ -5,6 +5,9 @@ export const AuthContext = createContext()
 const AuthUser = ({ children }) => {
     const [user, setUser] = useState({})
     const [token, setToken] = useState('')
+    const [conversation, setConversation] = useState(null)
+    const [messages, setMessages] = useState([])
+
     const ls = typeof window !== 'undefined' ? window.localStorage : null
     useEffect(() => {
         if (ls && ls.getItem('user') && ls.getItem('token')) {
@@ -16,7 +19,7 @@ const AuthUser = ({ children }) => {
         }
     }, [])
     return (
-        <AuthContext.Provider value={{ user, setUser, token, setToken }}>
+        <AuthContext.Provider value={{ user, setUser, token, setToken, conversation, setConversation, messages, setMessages }}>
             {children}
         </AuthContext.Provider>
     )

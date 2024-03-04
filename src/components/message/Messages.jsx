@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Messages = ({ chatPosition }) => {
+const Messages = ({ chatPosition, item, name }) => {
     return (
         <div className={`chat ${chatPosition}`}>
             <div className='avatar chat-image'>
@@ -9,10 +9,10 @@ const Messages = ({ chatPosition }) => {
                 </div>
             </div>
             <div className="chat-header">
-                Obi-Wan Kenobi
+                {name}
             </div>
             <div>
-                <div className={`chat-bubble text-white break-words`}>message.message</div>
+                <div className={`chat-bubble text-white ${item?.message?.length < 10 ? '' : 'break-all'}`}>{item.message}</div>
                 <div className='flex items-center gap-1 opacity-50 text-xs chat-footer'>12:45</div>
             </div>
         </div>

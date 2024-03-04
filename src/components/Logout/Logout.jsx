@@ -4,13 +4,14 @@ import { AuthContext } from '../../context/AuthUser';
 import { useNavigate } from 'react-router-dom';
 
 const Logout = () => {
-    const { setToken, setUser } = useContext(AuthContext)
+    const { setToken, setUser, setConversation } = useContext(AuthContext)
     const navigate = useNavigate()
     const logout = () => {
         localStorage.setItem("token", '')
         setToken('')
         localStorage.setItem("user", JSON.stringify({}))
         setUser({})
+        setConversation(null)
         navigate('/signin')
     }
     return (
