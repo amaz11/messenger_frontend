@@ -4,23 +4,18 @@ import { SocketContext } from '../context/SocketContext'
 import useMessage from './useMessage'
 
 const useListenMessage = () => {
-    const { conversation, messages, } = useContext(AuthContext)
+    const { messages, setMessages } = useContext(AuthContext)
     const { socket } = useContext(SocketContext)
-    const { getMessages } = useMessage
 
     useEffect(() => {
-        // console.log(socket.on('newMessage'));
         if (socket) {
             socket.on('newMessage', (newMessage) => {
                 console.log(newMessage);
-                // // setMessages([...messages, newMessage]);
-                // getMessages(conversation.id)
+                setMessages([...messages, newMessage]);
             })
         }
-
-        console.log('newMessage');
         return () => socket?.off('newMessage')
-    }, [socket, messages])
+    }, [socket, setMessages, messages])
 
 }
 
