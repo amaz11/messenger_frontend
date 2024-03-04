@@ -34,7 +34,6 @@ const useMessage = () => {
     }
 
     const sendMessage = async (message, receiverId) => {
-        console.log(message, receiverId);
         const success = handleInputErrors(message);
         if (!success) return
         setSendloading(true)
@@ -47,10 +46,8 @@ const useMessage = () => {
                 },
                 body: JSON.stringify({ message })
             })
-            const data = await res.json()
-            if (data.ok) {
-                getMessages(receiverId)
-            }
+            await res.json()
+
         } catch (error) {
             toast.error(error.message);
         } finally {
@@ -58,7 +55,7 @@ const useMessage = () => {
         }
     }
 
-    return { messages, loading, getMessages, sendMessage }
+    return { messages, loading, getMessages, sendMessage, sendloading }
 }
 
 function handleInputErrors(message) {

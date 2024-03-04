@@ -4,10 +4,11 @@ import MessageInput from './MessageInput'
 import { TiMessages } from "react-icons/ti";
 import { AuthContext } from '../../context/AuthUser';
 import useMessage from '../../hooks/useMessage';
+import useListenMessage from '../../hooks/useListenMessage';
 const MessageBox = () => {
-    const { conversation } = useContext(AuthContext)
-    const { messages, loading } = useMessage()
-    console.log(loading);
+    const { conversation, messages } = useContext(AuthContext)
+    const { loading } = useMessage()
+    useListenMessage()
     return (
 
         <div className='flex flex-col justify-between p-4 md:min-w-[450px]'>
