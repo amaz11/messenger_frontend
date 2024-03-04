@@ -1,14 +1,12 @@
 import { useContext, useState } from 'react'
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthUser';
-import { SocketContext } from '../context/SocketContext';
 
 const useMessage = () => {
     const [loading, setLoading] = useState(false)
     const [sendloading, setSendloading] = useState(false)
 
     const { token, messages, setMessages } = useContext(AuthContext)
-    const { socket } = useContext(SocketContext)
 
     const getMessages = async (receiverId) => {
         setMessages([])
@@ -48,11 +46,11 @@ const useMessage = () => {
                 },
                 body: JSON.stringify({ message })
             })
+            // const data = 
             await res.json()
-            socket?.on('newMessage', (newMessage) => {
-                console.log(newMessage);
-                setMessages([...messages, newMessage]);
-            })
+            // if (data.ok) {
+            //     getMessages(receiverId)
+            // }
         } catch (error) {
             toast.error(error.message);
         } finally {
