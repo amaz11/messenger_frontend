@@ -9,7 +9,7 @@ const useGetUser = () => {
     const getUser = async () => {
         setLoading(true)
         try {
-            const res = await fetch('http://localhost:3000/api/v1/users/', {
+            const res = await fetch('https://mesager-production.up.railway.app/api/v1/users/', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ const useSignUp = () => {
 
         setLoading(true)
         try {
-            const res = await fetch('http://localhost:3000/api/v1/auth/signup', {
+            const res = await fetch('https://mesager-production.up.railway.app/api/v1/auth/signup', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, name, password, conPassword })

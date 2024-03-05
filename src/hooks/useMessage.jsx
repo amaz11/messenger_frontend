@@ -12,7 +12,7 @@ const useMessage = () => {
         setMessages([])
         setLoading(true)
         try {
-            const res = await fetch(`http://localhost:3000/api/v1/message/${receiverId}`, {
+            const res = await fetch(`https://mesager-production.up.railway.app/api/v1/message/${receiverId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const useMessage = () => {
         if (!success) return
         setSendloading(true)
         try {
-            const res = await fetch(`http://localhost:3000/api/v1/message/send/${receiverId}`, {
+            const res = await fetch(`https://mesager-production.up.railway.app/api/v1/message/send/${receiverId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
