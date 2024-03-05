@@ -7,8 +7,8 @@
 Some Features:
 
 -    Tech stack: MERN + Typescript + Prisma + Socket.io + TailwindCSS + Daisy UI
--    React custome hooks for data fetching
--    Authentication && Authorization with JWT
+-    React custom hooks for data fetching
+-    Authentication and Authorization with JWT
 -    Real-time messaging with Socket.io
 -    Online user status (Socket.io and React Context)
 -    Error handling both on the server and on the client
