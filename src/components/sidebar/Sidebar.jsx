@@ -10,7 +10,7 @@ const Sidebar = () => {
         <div className='relative p-4 border-r'>
             <SearchInput />
             <div className='px-3 divider'></div>
-            <div className='relative pb-5 h-full overflow-y-auto no-scrollbar'>
+            <div className='relative pb-5 h-96 overflow-y-auto no-scrollbar'>
                 {
                     loading ? <span className='top-1/3 left-1/2 absolute transform -translate-x-1/2 -translate-y-1/3 loading loading-spinner'></span> : user?.map(item => <People key={item.id} item={item} />)
                 }
