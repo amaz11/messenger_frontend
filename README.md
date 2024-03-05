@@ -14,7 +14,7 @@ Some Features:
 -    Error handling both on the server and on the client
 
 App Live Demo:
--    https://lucent-cuchufli-720574.netlify.app/signin
+-    https://lucent-cuchufli-720574.netlify.app/
 -    user1:- email: amaz@gmail.com password: 123456
 -    user2:- email: amaz1@gmail.com password: 123456
 
