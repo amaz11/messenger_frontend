@@ -12,7 +12,7 @@ const Messages = ({ chatPosition, item, name }) => {
                 {name}
             </div>
             <div>
-                <div className={`chat-bubble text-white ${item?.message?.length < 10 ? '' : 'break-all'}`}>{item.message}</div>
+                <div className={`chat-bubble text-white ${item?.message?.length > 20 ? 'break-all' : ''} ${item.shouldShake ? 'shake' : ''}`}>{item.message}</div>
                 <div className='flex items-center gap-1 opacity-50 text-xs chat-footer'>12:45</div>
             </div>
         </div>
