@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (token && token.length > 10) {
-            const socketContect = io('http://localhost:3000', {
+            const socketContect = io('https://mesager-production.up.railway.app/', {
                 transports: ['websocket'],
                 query: {
                     userId: user.id,
