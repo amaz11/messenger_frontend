@@ -13,7 +13,7 @@ Some Features:
 -    Online user status (Socket.io and React Context)
 -    Error handling both on the server and on the client
 
-App Online Demo:
+App Live Demo:
 -    https://lucent-cuchufli-720574.netlify.app/signin
 -    user1:- email: amaz@gmail.com password: 123456
 -    user2:- email: amaz1@gmail.com password: 123456
