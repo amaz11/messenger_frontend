@@ -24,8 +24,8 @@ App Online Demo:
 backend : https://github.com/amaz11/mesager
 ```ts
 PORT=...
-MONGO_DB_URI=...
-JWT_SECRET=...
+DATABASE_URL=
+JWT_SECRET_KEY=
 ```
 
 
