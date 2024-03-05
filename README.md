@@ -1,6 +1,6 @@
 ![Demo App](https://i.ibb.co/g9PZZwZ/Screenshot-2024-03-05-142009.png)
-(https://i.ibb.co/yqvW2qf/Screenshot-2024-03-05-142415.png)
-(https://i.ibb.co/xYKPC71/Screenshot-2024-03-05-142353.png)
+![Demo App](https://i.ibb.co/yqvW2qf/Screenshot-2024-03-05-142415.png)
+![Demo App](https://i.ibb.co/xYKPC71/Screenshot-2024-03-05-142353.png)
 
 
 
